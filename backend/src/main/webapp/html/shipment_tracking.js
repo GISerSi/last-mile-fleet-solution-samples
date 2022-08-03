@@ -178,7 +178,7 @@ class ShipmentTrackingApp {
         new google.maps.journeySharing.JourneySharingMapView(mapViewOptions);
 
     this.mapView.map.setOptions(
-        {center: {lat: 37.424069, lng: -122.0916944}, zoom: 14});
+        {center: {lat: 22.311265887741538, lng: 114.22053796915436}, zoom: 14});
 
     google.maps.event.addListenerOnce(this.mapView.map, 'tilesloaded', () => {
       setInputsDisabled(false);
@@ -207,13 +207,30 @@ class ShipmentTrackingApp {
           this.trackingId_;
 
       // Task type
-      document.getElementById('task-type-value').textContent = task.type;
+      if (task.type === 'PICKUP') {
+        document.getElementById('task-type-value').innerText = '取件'; //PICKUP
+      } else if (task.type === 'DELIVERY') {
+        document.getElementById('task-type-value').innerText = '送件'; //DELIVERY
+      } else {
+        document.getElementById('task-type-value').innerText = '其他'; //Others
+      }
 
       // Task status
-      document.getElementById('task-status-value').textContent = task.status;
+      if (task.status === 'OPEN') {
+        document.getElementById('task-status-value').innerText = '待完成'; //Open
+      } else if (task.status === 'CLOSED') {
+        document.getElementById('task-status-value').innerText = '已完成'; //Closed
+      } else {
+        document.getElementById('task-status-value').innerText = '未指派'; //Unspecified
+      }
 
       // Task outcome
-      document.getElementById('task-outcome-value').textContent = task.outcome;
+      document.getElementById('task-outcome-value').textContent = '';
+        if (task.outcome === 'SUCCEEDED') {
+          document.getElementById('task-outcome-value').innerText = '派取完成'; //Succeeded
+        } else if (task.outcome === 'FAILED') {
+          document.getElementById('task-outcome-value').innerText = '派取失败'; //Failed
+        }
 
       // # stops remaining
       const showStopsRemaining = !!task.remainingVehicleJourneySegments;
@@ -226,15 +243,15 @@ class ShipmentTrackingApp {
             stopsRemaining;
         if (stopsRemaining >= 2) {
           document.getElementById('stops-count').innerText =
-              `${stopsRemaining} stops away`;
+              `还有${stopsRemaining}站`;
         } else if (stopsRemaining === 1) {
           document.getElementById('stops-remaining-value').textContent = '';
           if (task.outcome === 'SUCCEEDED') {
-            document.getElementById('stops-count').innerText = 'Completed';
+            document.getElementById('stops-count').innerText = '派取完成'; //Completed
           } else if (task.outcome === 'FAILED') {
-            document.getElementById('stops-count').innerText = 'Attempted';
+            document.getElementById('stops-count').innerText = '派取失败'; //Attempted
           } else {
-            document.getElementById('stops-count').innerText = `You are the next stop`;
+            document.getElementById('stops-count').innerText = '将在下一站为您派取';
           }
         }
       } else {
@@ -242,9 +259,9 @@ class ShipmentTrackingApp {
         if (task.status === 'CLOSED') {
           document.getElementById('stops-remaining-value').textContent = '';
           if (task.outcome === 'SUCCEEDED') {
-            document.getElementById('stops-count').innerText = 'Completed';
+            document.getElementById('stops-count').innerText = '派取完成';
           } else {
-            document.getElementById('stops-count').innerText = 'Attempted';
+            document.getElementById('stops-count').innerText = '派取失败';
           }
         } else {
           document.getElementById('stops-count').innerText = '';
@@ -253,7 +270,7 @@ class ShipmentTrackingApp {
 
       // ETA
       document.getElementById('eta-value').textContent =
-          task.estimatedCompletionTime;
+          task.estimatedCompletionTime.toLocaleString('zh-CN');
 
       // Fetch data from manifest
       const taskId = task.name.split('/').pop();
@@ -261,8 +278,8 @@ class ShipmentTrackingApp {
           .then((response) => response.json())
           .then((d) => {
             if (d == null || d['status'] === 404) {
-              document.getElementById('eta-time').innerText = 'n/a';
-              document.getElementById('address').innerText = 'n/a';
+              document.getElementById('eta-time').innerText = '获取中';
+              document.getElementById('address').innerText = '获取中';
               return;
             }
             if (d['planned_completion_time'] != '') {
@@ -276,13 +293,13 @@ class ShipmentTrackingApp {
               }
               document.getElementById('eta-time').innerText = timeString;
             } else {
-              document.getElementById('eta-time').innerText = 'n/a';
+              document.getElementById('eta-time').innerText = '获取中';
             }
             if (d['planned_waypoint']['description'] != null) {
               document.getElementById('address').innerText =
                   d['planned_waypoint']['description'];
             } else {
-              document.getElementById('address').innerText = 'n/a';
+              document.getElementById('address').innerText = '获取中';
             }
           });
     });
@@ -412,11 +429,77 @@ function showHideElementById(id, show) {
  */
 function getTimeString(date) {
   let hours = date.getHours();
-  const ampm = hours >= 12 ? 'pm' : 'am';
+  const ampm = hours >= 12 ? '下午' : '上午'; // 'pm' : 'am';
   hours = (hours === 0 ? 12 : (hours > 12 ? hours - 12 : hours));
   let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = '0' + minutes;
   }
-  return `${hours}:${minutes} ${ampm}`;
+  return `${ampm} ${hours}:${minutes}`; // `${hours}:${minutes} ${ampm}`;
 }
+
+/**
+ * Translate task attribute for display.
+ * @param {string} attr {'type','','',''}
+ * @param {string} value
+ * @return {string} The locale value.
+ */
+function getTaskTranslated(attr, value) {
+
+}
+
+
+      // Task status
+      document.getElementById('task-status-value').textContent = task.status;
+      if (task.status === 'OPEN') {
+        document.getElementById('task-status-value').innerText = '待完成'; //Completed
+      } else if (task.status === 'CLOSED') {
+        document.getElementById('task-status-value').innerText = '已完成'; //Attempted
+      } else {
+        document.getElementById('task-status-value').innerText = '未指派'; //Unspecified
+      }
+
+      // Task outcome
+      document.getElementById('task-outcome-value').textContent = '';
+        if (task.outcome === 'SUCCEEDED') {
+          document.getElementById('task-outcome-value').innerText = '派取完成'; //Completed
+        } else if (task.outcome === 'FAILED') {
+          document.getElementById('task-outcome-value').innerText = '派取失败'; //Attempted
+        }
+
+      // # stops remaining
+      const showStopsRemaining = !!task.remainingVehicleJourneySegments;
+      const remainingVehicleJourneySegments =
+          task.remainingVehicleJourneySegments || [];
+      const stopsRemaining =
+          showStopsRemaining ? remainingVehicleJourneySegments.length : -1;
+      if (showStopsRemaining) {
+        document.getElementById('stops-remaining-value').textContent =
+            stopsRemaining;
+        if (stopsRemaining >= 2) {
+          document.getElementById('stops-count').innerText =
+              `还有${stopsRemaining}站`;
+        } else if (stopsRemaining === 1) {
+          document.getElementById('stops-remaining-value').textContent = '';
+          if (task.outcome === 'SUCCEEDED') {
+            document.getElementById('stops-count').innerText = '派取完成'; //Completed
+          } else if (task.outcome === 'FAILED') {
+            document.getElementById('stops-count').innerText = '派取失败'; //Attempted
+          } else {
+            document.getElementById('stops-count').innerText = `将在下一站为您派取`;
+          }
+        }
+      } else {
+        document.getElementById('stops-remaining-value').textContent = '';
+        if (task.status === 'CLOSED') {
+          document.getElementById('stops-remaining-value').textContent = '';
+          if (task.outcome === 'SUCCEEDED') {
+            document.getElementById('stops-count').innerText = '派取完成';
+          } else {
+            document.getElementById('stops-count').innerText = '派取失败';
+          }
+        } else {
+          document.getElementById('stops-count').innerText = '';
+        }
+      }
+

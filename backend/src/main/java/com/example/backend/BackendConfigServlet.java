@@ -124,7 +124,7 @@ public final class BackendConfigServlet extends HttpServlet {
       m.vehicle.vehicleId = BackendConfigUtils.getTimestampedId(m.vehicle.vehicleId);
 
       LatLng.Builder startLocation =
-          LatLng.newBuilder().setLatitude(37.42311).setLongitude(-122.09259);
+          LatLng.newBuilder().setLatitude(22.311265887741538).setLongitude(114.22053796915436);
       if (m.vehicle.startLocation != null) {
         startLocation
             .setLatitude(m.vehicle.startLocation.lat)

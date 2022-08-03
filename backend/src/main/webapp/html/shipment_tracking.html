@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./shipment_tracking.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
   <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-  <title>Shipment Tracking</title>
+  <title>思想科技-运输追踪</title>
 </head>
 
 <body>
@@ -23,8 +23,7 @@
           menu
         </button>
         <span class="mdc-top-app-bar__title"
-          style=" font-family: 'Google Sans', 'Roboto', sans-serif !important; font-weight: 400;">Shipment
-          Tracking</span>
+          style=" font-family: 'Google Sans', 'Roboto', sans-serif !important; font-weight: 400;">思想科技-运输追踪</span>
       </section>
     </div>
   </header>
@@ -34,19 +33,19 @@
     <div class="mdc-drawer__header mdc-elevation--z2">
       <h3 class="mdc-drawer__title"
         style=" font-family: 'Google Sans', 'Roboto', sans-serif !important; font-weight: 400; margin-top: 0.25rem">
-        Shipment Tracking</h3>
+        运输追踪</h3>
     </div>
     <div class=" mdc-drawer__content">
       <nav class="mdc-deprecated-list">
         <a class="mdc-deprecated-list-item" href="#" aria-current="page" tabindex="0" id="show-options-button">
           <span class="mdc-deprecated-list-item__ripple"></span>
           <i class="material-icons mdc-deprecated-list-item__graphic" aria-hidden="true">settings</i>
-          <span class="mdc-deprecated-list-item__text">Options</span>
+          <span class="mdc-deprecated-list-item__text">选项</span>
         </a>
         <a class="mdc-deprecated-list-item" href="#" aria-current="page" tabindex="0" id="reset-button">
           <span class="mdc-deprecated-list-item__ripple"></span>
           <i class="material-icons mdc-deprecated-list-item__graphic" aria-hidden="true">restart_alt</i>
-          <span class="mdc-deprecated-list-item__text">Reset</span>
+          <span class="mdc-deprecated-list-item__text">重置</span>
         </a>
       </nav>
     </div>
@@ -65,7 +64,7 @@
             <div class="mdc-notched-outline">
               <div class="mdc-notched-outline__leading"></div>
               <div class="mdc-notched-outline__notch">
-                <label for="tracking-id-input" class="mdc-floating-label">Tracking ID</label>
+                <label for="tracking-id-input" class="mdc-floating-label">追踪编号</label>
               </div>
               <div class="mdc-notched-outline__trailing"></div>
             </div>
@@ -76,15 +75,15 @@
         <div id="tracking-id-error"></div>
 
         <div class="details-container" id="details-container" style="display:none">
-          <div id="loading">Loading...</div>
+          <div id="loading">加载中...</div>
 
           <div class="info-container">
-            <div class="heading">ESTIMATED DELIVERY</div>
-            <div class="eta-time" id="eta-time">n/a</div>
-            <div class="stops-count" id="stops-count">1 stop away</div>
-            <div class="heading" style="margin-top:32px;">DELIVERY LOCATION</div>
+            <div class="heading">预计交货</div>
+            <div class="eta-time" id="eta-time">获取中</div>
+            <div class="stops-count" id="stops-count">还有1站</div>
+            <div class="heading" style="margin-top:32px;">派取位置</div>
             <div class="address" id="address">
-              n/a
+              获取中
             </div>
           </div>
 
@@ -92,32 +91,32 @@
           <table class="shipment-details-table" style="margin-top:32px">
             <tbody>
               <tr>
-                <td class="shipment-details-table__label">Tracking ID</td>
+                <td class="shipment-details-table__label">追踪编号</td>
                 <td class="shipment-details-table__value" id="tracking-id-value"></td>
               </tr>
 
               <tr>
-                <td class="shipment-details-table__label">Task type</td>
+                <td class="shipment-details-table__label">任务类型</td>
                 <td class="shipment-details-table__value" id="task-type-value"></td>
               </tr>
 
               <tr>
-                <td class="shipment-details-table__label">Task status</td>
+                <td class="shipment-details-table__label">任务状态</td>
                 <td class="shipment-details-table__value" id="task-status-value"></td>
               </tr>
 
               <tr>
-                <td class="shipment-details-table__label">Task outcome</td>
+                <td class="shipment-details-table__label">任务结果</td>
                 <td class="shipment-details-table__value" id="task-outcome-value"></td>
               </tr>
 
               <tr>
-                <td class="shipment-details-table__label"># stops remaining</td>
+                <td class="shipment-details-table__label"># 剩余站点</td>
                 <td class="shipment-details-table__value" id="stops-remaining-value"></td>
               </tr>
 
               <tr>
-                <td class="shipment-details-table__label">ETA</td>
+                <td class="shipment-details-table__label">预计抵达时间</td>
                 <td class="shipment-details-table__value" id="eta-value"></td>
               </tr>
             </tbody>

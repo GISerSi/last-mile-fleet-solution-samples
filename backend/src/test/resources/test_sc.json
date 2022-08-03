@@ -1,0 +1,217 @@
+{
+  "manifests": [
+    {
+      "vehicle": {
+        "vehicle_id": "vehicle_1",
+        "start_location": {
+          "lat": 22.311265887741538,
+          "lng": 114.22053796915436,
+          "description": "\u89c2\u5858\u4f1f\u4e1a\u8857\u0031\u0038\u0033\u53f7",
+          "remarks_mc": "183 Wai Yip St, Kwun Tong 观塘伟业街183号"
+        }
+      },
+      "tasks": [
+        {
+          "task_id": "task_1",
+          "tracking_id": "tracking_1",
+          "planned_waypoint": {
+            "lat": 22.31467214324418,
+            "lng": 114.22449786675661,
+            "description": "\u89c2\u5858\u534f\u548c\u8857\u0033\u0033\u53f7\u51ef\u6c47\u7b2c\u0033\u5ea7",
+            "remarks_mc": "Grand Ctr Tower 3, 33 Hip Wo St, Kwun Tong 观塘协和街33号凯汇第3座"
+          },
+          "task_type": "DELIVERY",
+          "duration_seconds": 60,
+          "planned_completion_time": "2021-10-21T23:25:30.826445-07:00",
+          "planned_completion_time_range_seconds": 3600,
+          "contact_name": "\u8d75\u5148\u751f",
+          "remarks_mc": "Mr. Zhao 赵先生"
+        },
+        {
+          "task_id": "task_2",
+          "tracking_id": "tracking_2",
+          "planned_waypoint": {
+            "lat": 22.31461115271361,
+            "lng": 114.22544722529842,
+            "description": "\u89c2\u5858\u534f\u548c\u8857\u0033\u0033\u53f7\u51ef\u6c47\u7b2c\u0032\u5ea7",
+            "remarks_mc": "Tower 2, 33 Hip Wo St, Kwun Tong 观塘协和街33号凯汇第2座"
+          },
+          "task_type": "PICKUP",
+          "duration_seconds": 60,
+          "planned_completion_time": "2021-10-22T00:25:30.826445-07:00",
+          "planned_completion_time_range_seconds": 3600,
+          "contact_name": "\u738b\u5148\u751f",
+          "remarks_mc": "Mr. Wang 王先生"
+        },
+        {
+          "task_id": "task_3",
+          "tracking_id": "tracking_3",
+          "planned_waypoint": {
+            "lat": 22.314106963305626,
+            "lng": 114.2256494035078,
+            "description": "\u89c2\u5858\u534f\u548c\u8857\u0033\u0033\u53f7\u51ef\u6c47\u7b2c\u0031\u5ea7",
+            "remarks_mc": "Tower 1, 33 Hip Wo St, Kwun Tong 观塘协和街33号凯汇第1座"
+          },
+          "task_type": "DELIVERY",
+          "duration_seconds": 60,
+          "planned_completion_time": "2021-10-22T01:25:30.826445-07:00",
+          "planned_completion_time_range_seconds": 3600,
+          "contact_name": "\u5f20\u5c0f\u59d0",
+          "remarks_mc": "Miss Zhang 张小姐"
+        },
+        {
+          "task_id": "task_4",
+          "tracking_id": "tracking_4",
+          "planned_waypoint": {
+            "lat": 22.31888515210772,
+            "lng": 114.2177394277379,
+            "description": "\u725b\u5934\u89d2\u4e0a\u6751\u0031\u5ea7\u5e38\u6ee1\u697c",
+            "remarks_mc": "Ngau Tau Kok, On Tak Rd, Upper Ngau Tau Kok Estate Block 1 Sheung Moon House 牛头角上村1座常满楼"
+          },
+          "task_type": "PICKUP",
+          "duration_seconds": 60,
+          "planned_completion_time": "2021-10-22T02:25:30.826445-07:00",
+          "planned_completion_time_range_seconds": 3600,
+          "contact_name": "\u9648\u5973\u58eb",
+          "remarks_mc": "Mrs. Chen 陈女士"
+        },
+        {
+          "task_id": "task_5",
+          "tracking_id": "tracking_5",
+          "planned_waypoint": {
+            "lat": 22.31927991802309,
+            "lng": 114.21698405677337,
+            "description": "\u725b\u5934\u89d2\u4e0a\u6751\u0032\u5ea7\u5e38\u9038\u697c",
+            "remarks_mc": "Upper Ngau Tau Kok Estate Block 2 Sheung Yat House 牛头角上村2座常逸楼"
+          },
+          "task_type": "DELIVERY",
+          "duration_seconds": 60,
+          "planned_completion_time": "2021-10-22T03:25:30.826445-07:00",
+          "planned_completion_time_range_seconds": 3600,
+          "contact_name": "\u5b8b\u5973\u58eb",
+          "remarks_mc": "Mrs Song 宋女士"
+        },
+        {
+          "task_id": "task_6",
+          "tracking_id": "tracking_6",
+          "planned_waypoint": {
+            "lat": 22.31896503173317,
+            "lng": 114.21732339728457,
+            "description": "\u725b\u5934\u89d2\u4e0a\u6751\u0033\u5ea7\u5e38\u60a6\u697c",
+            "remarks_mc": "Upper Ngau Tau Kok Estate Block 3 牛头角上村3座常悦楼"
+          },
+          "task_type": "DELIVERY",
+          "duration_seconds": 60,
+          "planned_completion_time": "2021-10-22T03:45:30.826445-07:00",
+          "planned_completion_time_range_seconds": 3600,
+          "contact_name": "\u6797\u5973\u58eb",
+          "remarks_mc": "Mrs Lin 林女士"
+        },
+        {
+          "task_id": "task_7",
+          "tracking_id": "tracking_7",
+          "planned_waypoint": {
+            "lat": 22.321846286271136,
+            "lng": 114.21197397593299,
+            "description": "\u5fb7\u798f\u82b1\u56ed\u0042\u0032\u5ea7",
+            "remarks_mc": "Telford Gardens Block B2 德福花园B2座"
+          },
+          "task_type": "DELIVERY",
+          "duration_seconds": 60,
+          "planned_completion_time": "2021-10-22T04:05:30.826445-07:00",
+          "planned_completion_time_range_seconds": 3600,
+          "contact_name": "\u5434\u5148\u751f",
+          "remarks_mc": "Mr. Wu 吴先生"
+        },
+        {
+          "task_id": "task_8",
+          "tracking_id": "tracking_8",
+          "planned_waypoint": {
+            "lat": 22.3218815707595,
+            "lng": 114.21269868760913,
+            "description": "\u5fb7\u798f\u82b1\u56ed\u0043\u0031\u5ea7",
+            "remarks_mc": "Telford Gardens Block C1 德福花园C1座"
+          },
+          "task_type": "DELIVERY",
+          "duration_seconds": 60,
+          "planned_completion_time": "2021-10-22T04:05:30.826445-07:00",
+          "planned_completion_time_range_seconds": 3600,
+          "contact_name": "\u9ec4\u5c0f\u59d0",
+          "remarks_mc": "Miss Huang 黄小姐"
+        },
+        {
+          "task_id": "task_9",
+          "tracking_id": "tracking_9",
+          "planned_waypoint": {
+            "lat": 22.316018114469237,
+            "lng": 114.21185506272623,
+            "description": "\u4e5d\u9f99\u6e7e\u4e34\u6cfd\u8857\u0038\u53f7",
+            "remarks_mc": "8 Lam Chak St, Kowloon Bay 九龙湾临泽街8号"
+          },
+          "task_type": "PICKUP",
+          "duration_seconds": 60,
+          "planned_completion_time": "2021-10-22T04:25:30.826445-07:00",
+          "planned_completion_time_range_seconds": 3600,
+          "contact_name": "\u9648\u5148\u751f",
+          "remarks_mc": "Mr. Chen 陈先生"
+        }
+      ],
+      "stops": [
+        {
+          "stop_id": "stop_1",
+          "planned_waypoint": {
+            "lat": 22.314568280733894, 
+            "lng": 114.22437078925111,
+            "description": "\u51ef\u6c47",
+            "remarks_mc": "Grand Central 凯汇"
+          },
+          "tasks": [
+            "task_1",
+            "task_2",
+            "task_3"
+          ]
+        },
+        {
+          "stop_id": "stop_2",
+          "planned_waypoint": {
+            "lat": 22.318764893105605,
+            "lng": 114.21788745825295,
+            "description": "\u725b\u5934\u89d2\u4e0a\u6751",
+            "remarks_mc": "Upper Ngau Tau Kok Estate 牛头角上村"
+          },
+          "tasks": [
+            "task_4",
+            "task_5",
+            "task_6"
+          ]
+        },
+        {
+          "stop_id": "stop_3",
+          "planned_waypoint": {
+            "lat": 22.321723629687593,
+            "lng": 114.21225369370546,
+            "description": "\u5fb7\u798f\u82b1\u56ed",
+            "remarks_mc": "Telford Gardens 德福花园"
+          },
+          "tasks": [
+            "task_7",
+            "task_8"
+          ]
+        },
+        {
+          "stop_id": "stop_4",
+          "planned_waypoint": {
+            "lat": 22.315712553394267,
+            "lng": 114.21184305185521,
+            "description": "\u542f\u6c47\u50b2\u817e\u5e7f\u573a",
+            "remarks_mc": "Harbourside HQ 启汇傲腾广场"
+          },
+          "tasks": [
+            "task_9"
+          ]
+        }
+      ]
+    }
+  ],
+  "description": ""
+}

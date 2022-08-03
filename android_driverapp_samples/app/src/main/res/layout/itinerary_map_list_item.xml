@@ -56,7 +56,7 @@
 
             <Button
                 android:id="@+id/navigate_button"
-                android:text="Navigate"
+                android:text="导航"
                 android:textAllCaps="false"
                 app:cornerRadius="4dp"
                 android:layout_width="wrap_content"

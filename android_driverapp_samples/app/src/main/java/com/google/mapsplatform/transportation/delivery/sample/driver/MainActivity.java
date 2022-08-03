@@ -98,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
     setupBottomNavigationView();
     verifyMapsApiKey();
+
     preferences = Preferences.getInstance(this);
     backend = new SampleBackend(this);
     jsonConfig.observe(this, this::loadConfiguration);

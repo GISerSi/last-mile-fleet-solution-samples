@@ -13,169 +13,169 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
   <string name="app_name">Delivery Driver</string>
 
   <!-- Bottom navigation menu item names -->
-  <string name="list">List</string>
-  <string name="map">Map</string>
-  <string name="settings">Settings</string>
+  <string name="list">列表</string>
+  <string name="map">地图</string>
+  <string name="settings">设置</string>
 
   <!-- Mark pickup/delivered -->
-  <string name="mark_delivered">Mark delivered</string>
-  <string name="delivered">Delivered</string>
-  <string name="mark_all_delivered">Mark all delivered</string>
-  <string name="could_not_deliver">Couldn\'t deliver</string>
-  <string name="mark_picked_up">Mark picked up</string>
-  <string name="picked_up">Picked up</string>
-  <string name="mark_all_picked_up">Mark all pick up</string>
-  <string name="could_not_pick_up">Couldn\'t pick up</string>
+  <string name="mark_delivered">标记为已送达</string>
+  <string name="delivered">已送达</string>
+  <string name="mark_all_delivered">标记全部已送达</string>
+  <string name="could_not_deliver">派送失败</string>
+  <string name="mark_picked_up">标记为已取件</string>
+  <string name="picked_up">已取件</string>
+  <string name="mark_all_picked_up">标记全部已取件</string>
+  <string name="could_not_pick_up">取件失败</string>
 
   <!-- Mark task outcome -->
-  <string name="completed">Completed</string>
-  <string name="attempted">Attempted</string>
-  <string name="complete">Complete</string>
+  <string name="completed">已完成</string>
+  <string name="attempted">递取失败</string>
+  <string name="complete">完成</string>
 
   <!-- Toast messages -->
-  <string name="invalid_maps_api_key">Invalid Maps API key: [%s]. Check AndroidManifest.xml.</string>
-  <string name="stops_list_update_done">Stops list updated!</string>
-  <string name="stops_list_update_fail">Failed to update stops list!</string>
-  <plurals name="task_outcome_updates_sent">
-    <item quantity="one">Sent task outcome update for %d task!</item>
-    <item quantity="other">Sent task outcome updates for %d tasks!</item>
+  <string name="invalid_maps_api_key">无效的 Maps API key: [%s]. 请查看 AndroidManifest.xml.</string>
+  <string name="stops_list_update_done">站点列表已更新!</string>
+  <string name="stops_list_update_fail">无法更新站点列表</string>
+  <plurals name="task_outcome_updates_sent" tools:ignore="UnusedQuantity">
+    <item quantity="one">已为任务 %d 更新状态!</item>
+    <item quantity="other">已为任务 %d 更新状态!</item>
   </plurals>
-  <plurals name="task_outcome_update_failed">
-    <item quantity="one">Failed to update task outcome for %d task!</item>
-    <item quantity="other">Failed to update task outcomes for %d tasks!</item>
+  <plurals name="task_outcome_update_failed" tools:ignore="UnusedQuantity">
+    <item quantity="one">无法已为任务 %d 更新状态!</item>
+    <item quantity="other">无法为任务 %d 更新状态!</item>
   </plurals>
-  <string name="task_outcomes_update_done">Task outcomes updated!</string>
-  <string name="backend_manifest_loaded">Manifest loaded!</string>
+  <string name="task_outcomes_update_done">任务状态已更新!</string>
+  <string name="backend_manifest_loaded">已获取到货单!</string>
   <string name="backend_manifest_404">Backend manifest endpoint returned 404.\nEnsure that a manifest was loaded.</string>
   <string name="backend_manifest_error">Could not fetch manifest from backend:\n%s</string>
-  <string name="stop_list_reorder_sent">Sent new stop order!</string>
-  <string name="stop_list_reorder_updated">Stop order updated!</string>
-  <string name="stop_list_reorder_failed">Failed to update stop order!</string>
+  <string name="stop_list_reorder_sent">已上传新的站点排序!</string>
+  <string name="stop_list_reorder_updated">站点排序已更新!</string>
+  <string name="stop_list_reorder_failed">无法更新站点排序!</string>
 
   <!-- Navigation bottom bar strings -->
-  <plurals name="nav_bottom_pick_ups">
-    <item quantity="one">%d pick up</item>
-    <item quantity="other">%d pick ups</item>
+  <plurals name="nav_bottom_pick_ups" tools:ignore="UnusedQuantity">
+    <item quantity="one">%d 个取件</item>
+    <item quantity="other">%d 个取件</item>
   </plurals>
-  <plurals name="nav_bottom_deliveries">
-    <item quantity="one">%d delivery</item>
-    <item quantity="other">%d deliveries</item>
+  <plurals name="nav_bottom_deliveries" tools:ignore="UnusedQuantity">
+    <item quantity="one">%d 个派送</item>
+    <item quantity="other">%d 个派送</item>
   </plurals>
 
   <!-- Settings Options -->
-  <string name="location_tracking">Location Tracking</string>
-  <string name="simulation">Simulation</string>
+  <string name="location_tracking">位置追踪</string>
+  <string name="simulation">模拟器</string>
   <string name="multi_destinations">Multi Destinations</string>
   <string name="provider_id">Provider ID</string>
   <string name="provider_id_hint">Cloud project ID</string>
   <string name="backend_url">Backend URL</string>
-  <string name="backend_url_hint">https://...</string>
+  <string name="backend_url_hint">https://…</string>
   <string name="client_id">Client ID</string>
   <string name="client_id_hint">Unique ID for this client</string>
 
-  <string name="your_itinerary">Your itinerary</string>
-  <string name="delivery_details">Delivery Details</string>
-  <string name="details">Details</string>
-  <string name="delivery">Delivery</string>
-  <string name="deliveries">Deliveries</string>
-  <string name="pick_up">Pick up</string>
-  <string name="pick_ups">Pick ups</string>
-  <string name="arrival_message">You\'ve arrived at your destination</string>
+  <string name="your_itinerary">您的行程</string>
+  <string name="delivery_details">派取详情</string>
+  <string name="details">详情</string>
+  <string name="delivery">派送</string>
+  <string name="deliveries">派送</string>
+  <string name="pick_up">取件</string>
+  <string name="pick_ups">取件</string>
+  <string name="arrival_message">您已到达目的地</string>
 
   <!-- Action of opening the drawer  [CHAR_LIMIT=30]-->
-  <string name="navigation_drawer_open">Open navigation drawer</string>
+  <string name="navigation_drawer_open">开启导航栏</string>
   <!-- Action of closing the drawer  [CHAR_LIMIT=30]-->
-  <string name="navigation_drawer_close">Close navigation drawer</string>
+  <string name="navigation_drawer_close">收起导航栏</string>
   <!-- Header of the navigation panel  [CHAR_LIMIT=30]-->
   <string name="nav_header_title">Delivery driver test app</string>
   <!-- Description of navigation header  [CHAR_LIMIT=20]-->
   <string name="nav_header_desc">Navigation header</string>
   <!-- Settings menu option [CHAR_LIMIT=20]-->
-  <string name="action_settings">Settings</string>
+  <string name="action_settings">设置</string>
   <!-- Version info menu option [CHAR_LIMIT=20] -->
-  <string name="action_version">Version info</string>
+  <string name="action_version">版本信息</string>
 
   <!-- Home fragment title on navigation menu  [CHAR_LIMIT=20]-->
-  <string name="menu_home">Home</string>
+  <string name="menu_home">主页</string>
   <!-- Itinerary fragment title on navigation menu  [CHAR_LIMIT=20]-->
-  <string name="menu_itinerary">Itinerary</string>
+  <string name="menu_itinerary">行程</string>
   <!-- Parser fragment title on navigation menu  [CHAR_LIMIT=20]-->
-  <string name="menu_parser">Parser</string>
+  <string name="menu_parser">解析器</string>
 
   <!-- Location permission -->
   <!-- Location permission warning dialog title  [CHAR_LIMIT=20]-->
-  <string name="permission_warning_title">Location permission</string>
+  <string name="permission_warning_title">位置权限</string>
   <!-- Location permission warning dialog message  [CHAR_LIMIT=60]-->
-  <string name="permission_warning_message">This app needs location permission grants to work properly.</string>
+  <string name="permission_warning_message">此应用需要授权位置权限</string>
   <!-- Location permission warning dialog button label  [CHAR_LIMIT=20]-->
-  <string name="permission_warning_button">Ok</string>
+  <string name="permission_warning_button">好的</string>
 
   <!-- Vehicle creation -->
   <!-- Vehicle creation warning dialog title  [CHAR_LIMIT=30]-->
-  <string name="vehicle_warning_title">Vehicle already exists</string>
+  <string name="vehicle_warning_title">车辆已存在</string>
   <!-- Vehicle creation warning dialog message  [CHAR_LIMIT=60]-->
-  <string name="vehicle_warning_message">This vehicle id already exists on Spanner.</string>
+  <string name="vehicle_warning_message">此车辆编号已存在.</string>
   <!-- Vehicle creation warning dialog button label  [CHAR_LIMIT=20]-->
-  <string name="vehicle_warning_button">Ok</string>
+  <string name="vehicle_warning_button">好的</string>
 
 
   <!-- Messages -->
 
   <!-- Shown when JSON file load fails [CHAR_LIMIT=30] -->
-  <string name="error_json_load">Error loading JSON</string>
+  <string name="error_json_load">无法加载JSON文件</string>
   <!-- Shown when JSON file load succeeds [CHAR_LIMIT=30] -->
-  <string name="info_json_load">Loaded JSON</string>
+  <string name="info_json_load">已加载JSON文件</string>
   <!-- Shown when update task fails [CHAR_LIMIT=30] -->
-  <string name="error_task_update">Update task failed</string>
+  <string name="error_task_update">无法更新任务</string>
   <!-- Shown when update task succeeds [CHAR_LIMIT=30] -->
-  <string name="info_task_update">Task updated</string>
+  <string name="info_task_update">已更新任务</string>
 
   <!-- Info panel -->
 
   <!-- Simulation switch label [CHAR_LIMIT=80]-->
-  <string name="simulation_label">Simulation</string>
+  <string name="simulation_label">模拟器</string>
   <!-- Location tracking switch label [CHAR_LIMIT=80]-->
-  <string name="tracking_label">Location tracking</string>
+  <string name="tracking_label">位置追踪</string>
   <!-- Vehicle stop information shown on panel [CHAR_LIMIT=80]-->
-  <string name="stop_info">Next stop: %1$s - Tasks: %2$d</string>
+  <string name="stop_info">下一个站点: %1$s - 任务: %2$d</string>
   <!-- Vehicle id information shown on panel [CHAR_LIMIT=80]-->
-  <string name="vehicle_info">Vehicle: %1$s</string>
+  <string name="vehicle_info">车辆: %1$s</string>
 
   <!-- Task info panel -->
 
   <!-- Task number label [CHAR_LIMIT=80] -->
-  <string name="task_number">Task %1$d of %2$d</string>
+  <string name="task_number">任务 %1$d / %2$d</string>
   <!-- Task name label [CHAR_LIMIT=80] -->
-  <string name="task_name">Task: %1$s</string>
+  <string name="task_name">任务: %1$s</string>
   <!-- Task type label [CHAR_LIMIT=80] -->
-  <string name="task_type">Type: %1$s</string>
+  <string name="task_type">类型: %1$s</string>
   <!-- Task duration label [CHAR_LIMIT=80] -->
-  <string name="task_duration">Duration: %1$d</string>
+  <string name="task_duration">区间: %1$d</string>
   <!-- Task outcome label [CHAR_LIMIT=80] -->
-  <string name="task_outcome">Outcome: %1$s</string>
+  <string name="task_outcome">结果: %1$s</string>
   <!-- Task location label [CHAR_LIMIT=80] -->
-  <string name="task_location">Location: %1$s</string>
+  <string name="task_location">位置: %1$s</string>
   <!-- Go off-route button [CHAR_LIMIT=80] -->
-  <string name="off_route_button">Go off-route</string>
+  <string name="off_route_button">偏离路线</string>
 
   <!-- Action button -->
 
   <!-- Create delivery label [CHAR_LIMIT=80] -->
   <string name="create_delivery">Create delivery</string>
   <!-- Enroute state label [CHAR_LIMIT=80]-->
-  <string name="stop_new">Enroute to stop</string>
+  <string name="stop_new">前往站点</string>
   <!-- Arrived state label [CHAR_LIMIT=80]-->
-  <string name="stop_enroute">Arrived at stop</string>
+  <string name="stop_enroute">抵达站点</string>
   <!-- Completed stop state label [CHAR_LIMIT=80]-->
-  <string name="stop_arrived">Completed stop</string>
+  <string name="stop_arrived">完成站点</string>
   <!-- Completed state label [CHAR_LIMIT=80]-->
-  <string name="stop_completed">Completed</string>
+  <string name="stop_completed">完成</string>
   <!-- Unspecificed state label[CHAR_LIMIT=80]-->
-  <string name="stop_unspecified">No action available</string>
+  <string name="stop_unspecified">暂无站点</string>
 
   <!-- Move stop up button [CHAR_LIMIT=80] -->
   <string name="stop_down">Down</string>
@@ -189,36 +189,36 @@
   <!-- Task buttons -->
 
   <!-- Start label [CHAR_LIMIT=80] -->
-  <string name="task_status_success">Success</string>
+  <string name="task_status_success">成功</string>
   <!-- Complete label [CHAR_LIMIT=80] -->
-  <string name="task_status_fail">Fail</string>
+  <string name="task_status_fail">失败</string>
   <!-- Next label [CHAR_LIMIT=80] -->
-  <string name="task_next">Next</string>
+  <string name="task_next">下一个</string>
   <!-- Previous label [CHAR_LIMIT=80] -->
-  <string name="task_previous">Previous</string>
+  <string name="task_previous">前一个</string>
 
   <!-- Task view button [CHAR_LIMIT=80] -->
-  <string name="task_view">View</string>
+  <string name="task_view">查看</string>
   <!-- Load tasks button label [CHAR_LIMIT=80] -->
-  <string name="load_tasks">Load tasks</string>
+  <string name="load_tasks">加载任务</string>
 
   <!-- Parsing log -->
 
   <!-- Log type label [CHAR_LIMIT=80] -->
-  <string name="log_type_label">Type</string>
+  <string name="log_type_label">类型</string>
   <!-- Success label [CHAR_LIMIT=80] -->
-  <string name="log_success_label">Success</string>
+  <string name="log_success_label">成功</string>
   <!-- Log extra message label [CHAR_LIMIT=80] -->
-  <string name="log_extra_msg_label">Details</string>
+  <string name="log_extra_msg_label">详情</string>
 
   <!-- Default stop latitude [CHAR_LIMIT=80] -->
-  <string name="default_stop_lat">37.426638</string>
+  <string name="default_stop_lat">22.311265887741538</string>
   <!-- Default stop longitude [CHAR_LIMIT=80] -->
-  <string name="default_stop_lng">-122.080472</string>
+  <string name="default_stop_lng">114.22053796915436</string>
   <!-- Default task latitude [CHAR_LIMIT=80] -->
-  <string name="default_task_lat">37.427075</string>
+  <string name="default_task_lat">22.31467214324418</string>
   <!-- Default task longitude [CHAR_LIMIT=80] -->
-  <string name="default_task_lng">-122.079815</string>
+  <string name="default_task_lng">114.22449786675661</string>
   <!-- Default task duration [CHAR_LIMIT=80] -->
   <string name="default_task_duration">300</string>
 
@@ -230,5 +230,4 @@
   <string name="use_untrusted_label">Use untrusted driver role</string>
   <!-- Use DriverSDK label [CHAR_LIMIT=80] -->
   <string name="use_sdk_label">Force using DriverSDK API</string>
-
 </resources>

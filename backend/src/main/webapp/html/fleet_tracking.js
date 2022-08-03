@@ -214,7 +214,7 @@ class DeliveryVehicleTrackingApp {
       new google.maps.journeySharing.JourneySharingMapView(mapViewOptions);
 
     this.mapView.map.setOptions(
-      { center: { lat: 37.424069, lng: -122.0916944 }, zoom: 14 });
+      { center: { lat: 22.311265887741538, lng: 114.22053796915436 }, zoom: 14 });
 
     google.maps.event.addListenerOnce(this.mapView.map, 'tilesloaded', () => {
       setInputsDisabled(false);
@@ -237,14 +237,19 @@ class DeliveryVehicleTrackingApp {
             vehicle.remainingVehicleJourneySegments.length :
             '0';
 
-        document.getElementById('navigation-status-value').textContent =
-          vehicle.navigationStatus;
+        if (vehicle.navigationStatus==='ENROUTE_TO_DESTINATION') {
+            document.getElementById('navigation-status-value').textContent = '前往目的地途中';
+        } else if (vehicle.navigationStatus==='ARRIVED_AT_DESTINATION') {
+            document.getElementById('navigation-status-value').textContent = '已到达目的地';
+        } else { // UNKNOWN,NO_GUIDANCE,OFF_ROUTE
+            document.getElementById('navigation-status-value').textContent = '未知';
+        }
 
         document.getElementById('eta-value').textContent =
-          `${vehicle.remainingDurationMillis / 1000}s`;
+          `${vehicle.remainingDurationMillis / 1000} 秒`;
 
         document.getElementById('distance-value').textContent =
-          `${vehicle.remainingDistanceMeters / 1000}km`;
+          `${vehicle.remainingDistanceMeters / 1000} 公里`;
       }
 
       if (tasks && tasks.length) {
@@ -356,11 +361,11 @@ class DeliveryVehicleTrackingApp {
 
     const typeString = (task) => {
       if (task.type === 'DELIVERY') {
-        return 'Delivery';
+        return '送件'; // 'Delivery'
       } else if (task.type === 'PICKUP') {
-        return 'Pick up';
+        return '取件'; // 'Pick up'
       } else {
-        return 'Other';
+        return '其他'; // 'Other'
       }
     };
 
@@ -396,13 +401,13 @@ class DeliveryVehicleTrackingApp {
 
       const outcomeTime = new Date(task.outcomeTime);
       let hours = outcomeTime.getHours();
-      const ampm = hours >= 12 ? 'pm' : 'am';
+      const ampm = hours >= 12 ? '下午' : '上午'; // 'pm' : 'am';
       hours = (hours === 0 ? 12 : (hours > 12 ? hours - 12 : hours));
       let minutes = outcomeTime.getMinutes();
       if (minutes < 10) {
         minutes = '0' + minutes;
       }
-      const timeString = `${hours}:${minutes} ${ampm}`;
+      const timeString = `${ampm} ${hours}:${minutes}`; // `${hours}:${minutes} ${ampm}`;
       n.getElementsByClassName('time')[0].innerText = timeString;
       n.style.display = "table-row";
       if (this.highlightedTask_ != null && this.highlightedTask_.name.split('/').pop() == taskId) {

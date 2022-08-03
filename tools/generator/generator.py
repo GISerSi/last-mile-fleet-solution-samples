@@ -48,7 +48,7 @@ parser.add_argument(
     '-v',
     dest='num_vehicles',
     type=int,
-    default=3,
+    default=1,
     help='The number of vehicles to generate.')
 parser.add_argument(
     '--numStopsPerVehicle',
@@ -62,28 +62,28 @@ parser.add_argument(
     '-t',
     dest='num_tasks',
     type=int,
-    default=3,
+    default=5,
     help='The number of tasks to generate, per stop.')
 parser.add_argument(
     '--epiLat',
     '-lat',
     dest='lat',
     type=float,
-    default=37.8,
+    default=22.3112,
     help='The latitude of the circle\'s center.')
 parser.add_argument(
     '--epiLng',
     '-lng',
     dest='lng',
     type=float,
-    default=-122.4,
+    default=114.2205,
     help='The longitude of the circle\'s center.')
 parser.add_argument(
     '--radius',
     '-r',
     dest='radius',
     type=float,
-    default=0.05,
+    default=0.1,
     help='The radius of the circle, in degrees lat/lng.')
 parser.add_argument(
     '--stopRadius',
@@ -109,7 +109,7 @@ parser.add_argument(
     '--timezone',
     dest='timezone',
     type=str,
-    default='America/Los_Angeles',
+    default='Asia/Shanghai',
     help='A timezone identifier for generated timestamps.')
 
 

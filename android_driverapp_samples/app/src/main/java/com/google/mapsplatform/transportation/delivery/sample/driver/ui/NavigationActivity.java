@@ -226,7 +226,7 @@ public class NavigationActivity extends AppCompatActivity {
                     navigator
                         .getSimulator()
                         .simulateLocationsAlongExistingRoute(
-                            new SimulationOptions().speedMultiplier(1));
+                            new SimulationOptions().speedMultiplier(5));
                   }
                   navigator.startGuidance();
                 });
